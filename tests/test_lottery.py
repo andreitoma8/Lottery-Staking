@@ -37,4 +37,5 @@ def test_main():
     nft.approve(lottery.address, 61, {"from": accounts[6]})
     lottery.stake([61], {"from": accounts[6]})
     chain.mine(blocks=1, timedelta=86500 * 3)
-    print(lottery.getWinner(214141349134561941))
+    print(lottery.getStakers())
+    # print(lottery.getWinner(214141349134561941))

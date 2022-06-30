@@ -84,12 +84,7 @@ contract LotteryStaking {
     }
 
     function getStakers() external view returns (address[] memory) {
-        uint256 count = stakers.length;
-        address[] memory _stakers = new address[](count);
-        for (uint256 i; i < count; i++) {
-            _stakers[i] = stakers[i];
-        }
-        return _stakers;
+        return stakers;
     }
 
     function getWinner(uint256 _randomNumber) public view returns (address) {
